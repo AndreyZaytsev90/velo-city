@@ -1,0 +1,8 @@
+.color-change {
+    fill: #888888; /* Исходный цвет */
+    transition: fill 0.3s; /* Плавный переход */
+}
+
+a:focus .color-change {
+    fill: #000000; /* Цвет при фокусировке (нажатии) */
+}
