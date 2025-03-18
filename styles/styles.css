@@ -6,3 +6,11 @@
 a:focus .color-change {
     fill: #000000; /* Цвет при фокусировке (нажатии) */
 }
+
+.logo--top path{
+    fill: black;
+}
+
+.logo--footer path{
+    fill: black;
+}
