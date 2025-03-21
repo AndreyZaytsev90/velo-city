@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Главная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 <header class="header">
     <div class="top">
-        <a href="index.html" class="logo">
+        <a href="index.html" class="top__logo">
             <svg class="logo--top" width="194.212769" height="25.558594" viewBox="0 0 194.213 25.5586" fill="none"
                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <desc>
@@ -22,7 +25,7 @@
         </a>
         <form action="#">
             <label>
-                <input type="search" class="top__search-form">
+                <input type="search" class="top__search-form" placeholder="Поиск">
             </label>
         </form>
 
@@ -32,20 +35,20 @@
         </nav>
     </div>
     <div class="top-content">
-        <h1>Велосипед как украшение жизни</h1>
-        <p>Крути педали к своему здоровью</p>
-        <a href="catalog.html">Перейти в каталог </a>
+        <h1 class="top-content__heading">Велосипед как украшение жизни</h1>
+        <p class="top-content__description">Крути педали к своему здоровью</p>
+        <a class="top-content__link" href="catalog.html">Перейти в каталог </a>
     </div>
 </header>
 <main class="main">
     <section class="for">
         <h2 class="for__heading">Велосипеды для ... </h2>
         <div class="for__content">
-            <div class="for__item">ОТДЫХА</div>
-            <div class="for__item">СПОРТА</div>
-            <div class="for__item">ХОББИ</div>
-            <div class="for__item">ДЕТЕЙ</div>
-            <div class="for__item">ВСЕЙ СЕМЬИ</div>
+            <div class="for__item for__item--rest">ОТДЫХА</div>
+            <div class="for__item for__item--sport">СПОРТА</div>
+            <div class="for__item for__item--hobby">ХОББИ</div>
+            <div class="for__item for__item--kids">ДЕТЕЙ</div>
+            <div class="for__item for__item--family">ВСЕЙ СЕМЬИ</div>
         </div>
     </section>
     <section class="action-box">

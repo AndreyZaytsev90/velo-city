@@ -1,3 +1,23 @@
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 735px;
+    background-image: url("../assets/header-bg.svg");
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .color-change {
     fill: #888888; /* Исходный цвет */
     transition: fill 0.3s; /* Плавный переход */
@@ -7,10 +27,128 @@ a:focus .color-change {
     fill: #000000; /* Цвет при фокусировке (нажатии) */
 }
 
-.logo--top path{
+.logo--top path {
+    fill: white;
+}
+
+.logo--footer path {
     fill: black;
 }
 
-.logo--footer path{
-    fill: black;
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 120px;
+    margin-right: 120px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
+    padding-bottom: 14px;
+}
+
+.top-content a {
+    color: white;
+}
+
+.top-content {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.top__search-form {
+    width: 288px;
+    height: 44px;
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    padding: 0 32px 0 32px;
+    outline: none;
+}
+
+.top__nav a {
+    color: white;
+}
+
+.top-content__heading {
+    font-size: 64px;
+    width: 792px;
+    top: 140px;
+    height: 140px;
+}
+
+.top-content__description {
+    font-size: 24px;
+}
+
+.for__heading,
+.product-box__heading,
+.action-box__heading {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 59px;
+    letter-spacing: 0;
+}
+
+.for__content {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет элементам оборачиваться на новую строку */
+    justify-content: space-between; /* Распределяет пространство между элементами */
+    color: rgb(255, 255, 255);
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 41px;
+    letter-spacing: 0;
+}
+
+.for__item {
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 415px;
+    margin-bottom: 31px;
+}
+
+.for__item--rest {
+    background-image: url("../assets/for__item/rest.svg");
+    width: 583px;
+}
+
+.for__item--sport {
+    background-image: url("../assets/for__item/sport.jpeg");
+    width: 583px;
+}
+
+.for__item--hobby {
+    background-image: url("../assets/for__item/hobby.jpeg");
+    width: 378px;
+}
+
+.for__item--kids {
+    background-image: url("../assets/for__item/kids.jpeg");
+    width: 378px;
+}
+
+.for__item--family {
+    background-image: url("../assets/for__item/family.jpeg");
+    width: 378px;
+}
+
+.action .product {
+    width: 378px;
+}
+
+.action__image .product__image {
+    width: 250px;
+}
+
+.action__description .product__description {
+    color: rgb(136, 136, 136);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0;
+    text-align: left;
 }
