@@ -136,19 +136,57 @@ a:focus .color-change {
     width: 378px;
 }
 
-.action .product {
+.action, .product {
     width: 378px;
 }
 
-.action__image .product__image {
+.action__image, .product__image {
     width: 250px;
 }
 
-.action__description .product__description {
-    color: rgb(136, 136, 136);
+.action__description,
+.product__description {
+    color: rgb(136, 136, 136) !important;
     font-size: 14px;
     font-weight: 400;
     line-height: 17px;
     letter-spacing: 0;
-    text-align: left;
+}
+
+.action_prices,
+.product__price {
+    display: flex;
+    color: rgb(5, 5, 5);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0;
+}
+
+.action_prices--last {
+    color: rgb(136, 136, 136);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0;
+    text-decoration-line: line-through;
+}
+
+.link-box {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-decoration-line: underline;
+}
+.footer {
+    display: flex;
+}
+
+.footer-content {
+    display: flex;
+}
+.footer__info {
+    display: flex;
 }
