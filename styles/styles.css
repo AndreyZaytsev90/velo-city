@@ -37,7 +37,7 @@ body {
 }
 
 .main {
-    padding: 0 120px 0 120px;;
+    padding: 0 120px 0 120px;
 }
 
 .color-change {
@@ -212,14 +212,20 @@ a:focus .color-change {
 
 .footer {
     display: flex;
+    justify-content: space-between;
+    background: rgb(247, 246, 246);
+    height: 207px;
+    padding: 32px 120px 59px 120px;
 }
 
 .footer-content {
     display: flex;
+    justify-content: space-between;
 }
 
 .footer__info {
     display: flex;
+    justify-content: space-between;
 }
 
 .footer__nav-menu,
