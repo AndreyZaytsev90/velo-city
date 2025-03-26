@@ -31,6 +31,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 16px 120px 0;
 }
 
 .header__cart {
@@ -40,6 +41,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 16px 120px 0;
 }
 
 .main {
@@ -79,6 +81,7 @@ a:focus .color-change {
 
 .top__nav-item {
     padding-left: 32px;
+    text-decoration: none;
 }
 
 .top-content a {
@@ -144,6 +147,10 @@ a:focus .color-change {
 .main {
     padding: 64px 120px 64px;
 }
+.action-box,
+.product-box {
+    margin-bottom: 32px;
+}
 
 .for__heading,
 .product-box__heading,
@@ -152,6 +159,7 @@ a:focus .color-change {
     font-weight: 600;
     line-height: 59px;
     letter-spacing: 0;
+    margin-bottom: 32px;
 }
 
 .for__content {
@@ -172,30 +180,40 @@ a:focus .color-change {
     margin-bottom: 31px;
 }
 
+
+.for__item--rest ,
+.for__item--sport {
+    width: 583px;
+    text-align: center;
+    align-content: center;
+}
+
 .for__item--rest {
     background-image: url("../assets/for__item/rest.svg");
-    width: 583px;
 }
 
 .for__item--sport {
     background-image: url("../assets/for__item/sport.jpeg");
-    width: 583px;
 }
-
+.for__item--hobby,
+.for__item--kids,
+.for__item--family {
+    width: 378px;
+    text-align: center;
+    align-content: center;
+}
 .for__item--hobby {
     background-image: url("../assets/for__item/hobby.jpeg");
-    width: 378px;
 }
 
 .for__item--kids {
     background-image: url("../assets/for__item/kids.jpeg");
-    width: 378px;
 }
 
 .for__item--family {
     background-image: url("../assets/for__item/family.jpeg");
-    width: 378px;
 }
+
 
 .action, .product {
     width: 378px;
@@ -203,6 +221,11 @@ a:focus .color-change {
 
 .action__image, .product__image {
     width: 250px;
+    margin-bottom: 10px;
+}
+.action__heading,
+.product__heading {
+    margin-bottom: 9px;
 }
 
 .action__description,
@@ -213,6 +236,7 @@ a:focus .color-change {
     font-weight: 400;
     line-height: 17px;
     letter-spacing: 0;
+    margin-bottom: 13px;
 }
 
 .action_prices,
@@ -223,6 +247,7 @@ a:focus .color-change {
     font-weight: 500;
     line-height: 29px;
     letter-spacing: 0;
+    margin-bottom: 40px;
 }
 
 .action_prices--last {
@@ -232,15 +257,24 @@ a:focus .color-change {
     line-height: 29px;
     letter-spacing: 0;
     text-decoration-line: line-through;
+    margin-left: 44px;
 }
 
-.link-box {
+.link__box a {
     color: rgb(0, 0, 0);
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0;
-    text-decoration-line: underline;
+}
+.link__box-item:hover {
+    color: rgb(136, 136, 136);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+    text-decoration: none;
 }
 
 .footer {
@@ -268,10 +302,13 @@ a:focus .color-change {
 
 .footer__nav-menu a,
 .footer__nav-contacts a {
+    display: inline-block; /* или block */
     color: rgb(136, 136, 136);
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0;
+    margin-bottom: 12px; /* Теперь сработает */
+    text-decoration: none;
 }
 
 .footer__nav-contacts {
@@ -285,11 +322,19 @@ a:focus .color-change {
     font-weight: 500;
     letter-spacing: 0;
     padding-right: 129px;
+    margin-bottom: 12px;
+}
+
+.footer__icons {
+    display: flex;
+    justify-content: space-between;
+    width: 109px;
 }
 
 .footer__heading-form {
     font-size: 12px;
     font-weight: 400;
+    margin-bottom: 8px;
 }
 
 .footer__form-input {
@@ -300,6 +345,8 @@ a:focus .color-change {
     background: rgb(255, 255, 255);
     outline: none;
     padding: 0 17px 0 17px;
+    font-family: Montserrat, serif;
+    font-size: 12px;
 }
 
 .footer__form-input::placeholder {
@@ -307,19 +354,24 @@ a:focus .color-change {
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 0;
+    font-family: Montserrat, serif;
 }
 
 .footer__form-subscribe {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
     width: 260px;
     height: 40px;
     border-radius: 16px;
     background: rgba(222, 215, 215, 0.41);
     margin-top: 8px;
-
     color: rgb(0, 0, 0);
-    font-size: 12px;
-    font-weight: 400;
     letter-spacing: 0;
+}
+.footer__form-subscribe:hover {
+    background: black;
+    color: white;
 }
 
 .catalog_nav {
@@ -327,23 +379,41 @@ a:focus .color-change {
     justify-content: space-between;
 }
 
+.catalog__breadcrumbs-heading a:not(:last-child)::after {
+    content: "/";
+    padding: 0 10px;
+}
+
+/* Дополнительные стили для правильного отображения */
+.catalog__breadcrumbs-heading {
+    display: flex; /* Для горизонтального расположения элементов */
+    align-items: center;
+}
+
 .catalog__breadcrumbs-link {
     color: black;
     font-size: 16px;
     font-weight: 400;
     line-height: 32px;
-    letter-spacing: 0;
     text-decoration: none;
+    display: inline-block; /* Важно для работы псевдоэлементов */
 }
 
-.catalog__filter {
+/*.catalog__filter {
     width: 288px;
     height: 41px;
     border: 1px solid rgb(196, 196, 196);
     border-radius: 20px;
-}
+}*/
 
 .catalog__filter-select {
+
+    width: 288px;
+    height: 41px;
+    border: 1px solid rgb(196, 196, 196);
+    background-color: white;
+    border-radius: 20px;
+    font-family: Montserrat;
     color: rgb(0, 0, 0);
     font-size: 16px;
     font-weight: 400;
@@ -493,7 +563,11 @@ a:focus .color-change {
     background-color: white;
     margin-bottom: 64px;
 }
-
+.cart__action-clean:hover,
+.cart__action-resume:hover {
+    background: black;
+    color: white;
+}
 .promo__heading {
     color: rgb(0, 0, 0);
     font-size: 48px;
