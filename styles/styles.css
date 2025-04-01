@@ -28,13 +28,13 @@ body {
 
 .header__catalog {
     height: 400px;
-    background-image: url("../assets/header-catalog.svg");
+    background-image: url("../assets/header-catalog.jpeg");
     color: white;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 64px;
 }
 
 .header__cart {
@@ -98,6 +98,10 @@ a:focus .color-change {
     font-size: 64px;
     width: 792px;
     margin-top: 60px;
+}
+.top-content__heading-catalog {
+    margin-top: 127px;
+
 }
 
 .top__nav-item {
@@ -429,6 +433,7 @@ a:focus .color-change {
 .catalog_nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .catalog__breadcrumbs-heading a:not(:last-child)::after {
@@ -439,7 +444,7 @@ a:focus .color-change {
 /* Дополнительные стили для правильного отображения */
 .catalog__breadcrumbs-heading {
     display: flex; /* Для горизонтального расположения элементов */
-    align-items: center;
+    flex-direction: row;
 }
 
 .catalog__breadcrumbs-link {
