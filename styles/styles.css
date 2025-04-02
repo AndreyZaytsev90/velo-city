@@ -165,7 +165,9 @@ a:focus .color-change {
 .product-box {
     margin-bottom: 32px;
 }
-
+.action-box-cart {
+    margin-bottom: 121px;
+}
 .action-box__content,
 .product-box__content {
     display: flex;
@@ -434,6 +436,7 @@ a:focus .color-change {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 41px;
 }
 
 .catalog__breadcrumbs-heading a:not(:last-child)::after {
@@ -456,15 +459,11 @@ a:focus .color-change {
     display: inline-block; /* Важно для работы псевдоэлементов */
 }
 
-/*.catalog__filter {
-    width: 288px;
-    height: 41px;
-    border: 1px solid rgb(196, 196, 196);
-    border-radius: 20px;
-}*/
+.catalog__filter-form {
+    position: relative;
+}
 
-.catalog__filter-select {
-
+.catalog__filter-form select {
     width: 288px;
     height: 41px;
     border: 1px solid rgb(196, 196, 196);
@@ -477,7 +476,23 @@ a:focus .color-change {
     line-height: 20px;
     letter-spacing: 0;
     padding: 0 14px 0 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
+.catalog__filter-form:after {
+    width: 20px;
+    height: 11px;
+    content: "";
+    background-image: url("../assets/arrow.svg");
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 15px;
+    right: 15px;
+    pointer-events: none;
+    cursor: pointer;
+}
+
 
 .cart-main {
     display: flex;
@@ -496,10 +511,16 @@ a:focus .color-change {
     margin-top: 64px;
 }
 
+.cart__items {
+    display: flex;
+    flex-direction: column;
+}
+
 .cart__item {
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
+    margin-bottom: 32px;
 }
 
 .cart__header-title {
@@ -523,6 +544,17 @@ a:focus .color-change {
     display: flex;
     justify-content: space-between;
     width: 582px;
+}
+
+.cart__item-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 31px;
+}
+
+.cart__item-buttons {
+    display: flex;
 }
 
 .cart__item-price {
@@ -556,6 +588,10 @@ a:focus .color-change {
 
 .cart__item-option {
     padding: 0 11px 24px 13px;
+}
+
+.border__cart {
+    border: 0.5px solid rgb(202, 205, 216);
 }
 
 .order {
