@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/quantity.css">
 </head>
 <body>
 <header class="header__cart center">
@@ -59,11 +60,9 @@
                             </div>
 
                         </div>
-                        <label class="cart__item-quantity">
-                            <select class="cart__item-select">
-                                <option class="cart__item-option">1</option>
-                            </select>
-                        </label>
+
+                            <input type="number" value="1" min="1" class="cart__item-input">
+
                     </div>
 
                 </div>
@@ -84,11 +83,7 @@
                             </div>
 
                         </div>
-                        <label class="cart__item-quantity">
-                            <select class="cart__item-select">
-                                <option class="cart__item-option">1</option>
-                            </select>
-                        </label>
+                        <input type="number" value="1" min="1" class="cart__item-input">
                     </div>
 
                 </div>
@@ -103,20 +98,22 @@
         <aside class="order center">
             <form class="order__form" action="#">
                 <h2 class="order__form-heading"><strong>Оформление заказа</strong></h2>
-                <label class="order__form-label">
-                    <input class="order__form-input" type="text" placeholder="Введите имя">
-                </label>
+                <div class="order__form-form">
+                    <label class="order__form-label">
+                        <input class="order__form-input" type="text" placeholder="Введите имя">
+                    </label>
 
-                <label class="order__form-label">
-                    <input class="order__form-input" type="tel" value="+7" placeholder="Введите номер телефона">
-                </label>
+                    <label class="order__form-label">
+                        <input class="order__form-input" type="tel" value="+7" placeholder="Введите номер телефона">
+                    </label>
 
-                <label class="order__form-label">
-                    <input class="order__form-input" type="text" placeholder="Введите адрес доставки">
-                </label>
-
+                    <label class="order__form-label">
+                        <input class="order__form-input" type="text" placeholder="Введите адрес доставки">
+                    </label>
+                </div>
                 <div class="order__total">Итого: <strong>2 270 руб.</strong></div>
-                <button class="order__form-submit" type="submit">Оформить заказ</button>
+                <button class="order__form-submit" type="submit">Оформить заказ
+                </button>
             </form>
         </aside>
     </div>
