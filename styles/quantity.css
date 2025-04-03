@@ -3,4 +3,60 @@
 
 .cart__item-input {
     font-family: Poppins, sans-serif;
+    width: 71px;
+    height: 51px;
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 210%;
+    letter-spacing: 0;
+    padding-right: 24px;
+    margin: 0;
+    border-radius: 6px;
+    border: none;
+    background: rgb(247, 246, 246);
+    box-sizing: border-box;
+    outline: none;
+    text-align: center;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+}
+
+.cart__item-input-block {
+    position: relative;
+    width: 71px;
+    height: 51px;
+}
+
+.cart__item-input::-webkit-outer-spin-button,
+.cart__item-input::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.cart__item-input-arrow:hover path {
+    stroke: black;
+}
+
+.cart__item-input-up,
+.cart__item-input-down {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    border: none;
+    background: rgb(247, 246, 246);
+}
+
+.cart__item-input-up {
+    top: 9px;
+    right: 10px;
+}
+
+.cart__item-input-down {
+    bottom: 8px;
+    right: 10px;
 }
