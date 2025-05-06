@@ -1,0 +1,102 @@
+x-flags: &penpot-flags
+  PENPOT_FLAGS: |
+    disable-email-verification
+    disable-telemetry
+    disable-login-with-google
+    disable-login-with-github
+    disable-webhooks
+    disable-smtp
+    disable-secure-session-cookies
+    enable-registration
+    enable-login-with-password
+
+x-uri: &penpot-public-uri
+  PENPOT_PUBLIC_URI: http://localhost:9001
+
+x-body-size: &penpot-http-body-size
+  PENPOT_HTTP_SERVER_MAX_BODY_SIZE: 31457280
+  PENPOT_HTTP_SERVER_MAX_MULTIPART_BODY_SIZE: 367001600
+
+networks:
+  penpot:
+    name: penpot-network
+    driver: bridge
+
+volumes:
+  penpot_postgres_v15:
+  penpot_assets:
+
+services:
+  penpot-frontend:
+    image: "penpotapp/frontend:${PENPOT_VERSION:-latest}"
+    container_name: penpot-frontend
+    restart: always
+    ports:
+      - "9001:8080"
+    volumes:
+      - penpot_assets:/opt/data/assets
+    networks:
+      - penpot
+    depends_on:
+      penpot-backend:
+        condition: service_healthy
+    environment:
+      << : [*penpot-flags, *penpot-http-body-size]
+      PENPOT_BACKEND_URI: "http://penpot-backend:6060"
+      PENPOT_DISABLE_SIGNUP: "false"
+      PENPOT_DEMO_WARNING: "false"
+
+  penpot-backend:
+    image: "penpotapp/backend:${PENPOT_VERSION:-latest}"
+    container_name: penpot-backend
+    restart: always
+    volumes:
+      - penpot_assets:/opt/data/assets
+    networks:
+      - penpot
+    depends_on:
+      penpot-postgres:
+        condition: service_healthy
+      penpot-redis:
+        condition: service_healthy
+    environment:
+      << : [*penpot-flags, *penpot-public-uri, *penpot-http-body-size]
+      PENPOT_DATABASE_URI: postgresql://penpot-postgres/penpot
+      PENPOT_DATABASE_USERNAME: penpot
+      PENPOT_DATABASE_PASSWORD: penpot
+      PENPOT_REDIS_URI: redis://penpot-redis/0
+      PENPOT_ASSETS_STORAGE_BACKEND: assets-fs
+      PENPOT_STORAGE_ASSETS_FS_DIRECTORY: /opt/data/assets
+
+  penpot-postgres:
+    image: postgres:15
+    container_name: penpot-postgres
+    restart: always
+    volumes:
+      - penpot_postgres_v15:/var/lib/postgresql/data
+    networks:
+      - penpot
+    environment:
+      POSTGRES_DB: penpot
+      POSTGRES_USER: penpot
+      POSTGRES_PASSWORD: penpot
+
+
+  penpot-redis:
+    image: redis:7.2
+    container_name: penpot-redis
+    restart: always
+    networks:
+      - penpot
+
+
+  penpot-mailcatch:
+    image: sj26/mailcatcher:latest
+    container_name: penpot-mailcatch
+    restart: always
+    networks:
+      - penpot
+    ports:
+      - "1080:1080"
+    expose:
+      - "1025"
