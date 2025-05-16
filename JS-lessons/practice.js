@@ -25,3 +25,15 @@ while (i < 5) {
 const pages = [1, 2, 3, 4, 5, 6]
 
 //
+
+
+for (let j = 5; j < 10; j++) {
+    console.log(i)
+}
+
+function mult(a, b) {
+    return a + b
+}
+
+const result = mult(40, 50)
+console.log(result)
