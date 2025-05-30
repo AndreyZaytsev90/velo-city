@@ -1,14 +1,13 @@
-import './App.css'
-import {MyName} from "../MyName/MyName.jsx";
+import "./App.css";
 
 function App() {
-    const name = 'Andrey'
-    return (
-        <>
-            <div>React Web Garage</div>
-            <MyName name={name}/>
-        </>
-    )
+
+
+  return (
+    <>
+      
+    </>
+  );
 }
 
-export default App
+export default App;
