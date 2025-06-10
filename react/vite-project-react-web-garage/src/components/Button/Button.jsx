@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Button = ({callBack}) => {
+export const Button = ({callBack, label, btnStyles}) => {
 
     const onClickHandler = () => {
         console.log("Меня нажали")
@@ -9,7 +9,7 @@ export const Button = ({callBack}) => {
 
 
     return (
-        <button onClick={onClickHandler}>Кнопка</button>
+        <button style={btnStyles} onClick={onClickHandler}>{label || "Кнопка"}</button>
     );
 };
 
