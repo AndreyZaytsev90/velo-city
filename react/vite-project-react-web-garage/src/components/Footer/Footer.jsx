@@ -1,9 +1,9 @@
 import React from 'react';
 import './Footer.css'
 
-const Footer = () => {
+const Footer = ({ isDarkMode }) => {
     return (
-        <footer className="container">
+        <footer className={isDarkMode ? "container1": "container2"}>
            <p>Подвал сайта</p>
         </footer>
     );

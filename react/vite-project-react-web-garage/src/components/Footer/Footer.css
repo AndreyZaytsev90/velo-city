@@ -1,3 +1,9 @@
-.container {
+.container1 {
+    background-color: #000000;
+    color: white;
+}
+
+.container2 {
     background-color: #5674ab;
+    color: #000000;
 }
