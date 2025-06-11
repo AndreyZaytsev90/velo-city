@@ -12,8 +12,15 @@ function App() {
     return (
         <>
             <main className="app">
-                <Header clicks={clicks} isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
-                <HomePage clicks={clicks} setClicks={setClicks} isDarkMode={isDarkMode}/>
+                <Header clicks={clicks}
+                        isDarkMode={isDarkMode}
+                        setIsDarkMode={setIsDarkMode}/>
+                <HomePage
+                    clicks={clicks}
+                    setClicks={setClicks}
+                    isDarkMode={isDarkMode}
+                    message={"Message from HomePage"}
+                />
                 <Footer isDarkMode={isDarkMode}/>
             </main>
         </>
